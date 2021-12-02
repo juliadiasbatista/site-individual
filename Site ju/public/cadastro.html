@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <script src="./js/funcoes.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="header">
+
+                <div class="container">
+
+                    <h1>
+
+
+                    </h1>
+
+                    <ul class="navbar">
+
+                        <li>
+                            <a href="./index.html">Início</a>
+                        </li>
+
+                        <li>
+                            <a href="./O que é mapa.html">Aprenda sobre</a>
+                        </li>
+
+                        <li>|</li>
+
+                        <li class="agora">
+                            <a href="./login.html">Login</a>
+                        </li>
+
+                        <li>
+                            <a href="./cadastro.html">Cadastro</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="login">
+
+            <div class="container">
+
+                <div class="card ">
+
+                    <div class="formulario">
+
+                        <form id="form_login" method="post" onsubmit="return cadastrar()">
+
+                            <h2>Bem Vindo!</h2>
+
+                            <p> 
+                                Nome:
+                                <input id="nome_input" name="nome" type="text" placeholder="Nome Completo">
+                                
+                                E-mail:
+                                <input id="email_input" name="email" type="text" placeholder="Login">
+
+                                Senha:
+                                <input id="senha_input" name="senha" type="password" placeholder="******">
+
+                                Confirmação da Senha:
+                                <input id="confirmacao_senha_input" name="confirmacao-senha" type="password" placeholder="******">
+                                <br>
+                            </p>
+
+                            signo:
+                            <select id="signo_atual">
+
+                                <option value="1">Aries</option>
+                                <option value="2">Touro</option>
+                                <option value="3">Capricornio</option>
+                                <option value="4">Peixes</option>
+                        
+                            </select>
+
+                            <button class="btn" type="button" onclick="cadastrar()">
+                                Cadastrar
+                            </button>
+
+                        </form>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function cadastrar() {
+
+        var signoVar = signo_atual.value;
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+
+            window.alert("Preencha todos os campos para prosseguir!");
+            if (nomeVar == "") {
+                console.log('nome está em branco')
+            }
+            if (emailVar == "") {
+                console.log('email está em branco')
+            }
+            if (senhaVar == "") {
+                console.log('senha está em branco')
+            }
+            if (confirmacaoSenhaVar == "") {
+                console.log('confirmacaoSenha está em branco')
+            }
+            
+            return false;
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            
+            return false;
+        }
+
+        if (senhaVar != confirmacaoSenhaVar) {
+            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+            
+            return false;
+        }
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                signoServer: signoVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "./login.html";
+                limparFormulario();
+               
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+                alert('erro')
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            
+        });
+
+        return false;
+    }
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="signo_atual">
+
+        <option value="1">Aries</option>
+        <option value="2">Touro</option>
+        <option value="3">Capricornio</option>
+        <option value="4">Peixes</option>
+
+    </select>
+
+    <div id="div_signo">
+    </div>
+
+    <button onclick="pesquisar()">Pesquisar</button>
+
+
+</body>
+
+</html>
+
+<script>
+    function pesquisar() {
+
+        var fkSigno = signo_atual.value
+        fetch(`/usuarios/contagem/${fkSigno}`)
+            .then(function (resultado) {
+                resultado.json().then(function (json) {
+                    div_signo.innerHTML = json[0].quantidade
+                })
+            })
+
+    }
+
+</script>

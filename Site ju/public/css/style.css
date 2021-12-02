@@ -1,0 +1,427 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+}
+
+.header { 
+  color: #ffeeee;
+}
+
+/* Alterar a cor dos atalhos do header */
+.header a {
+  text-decoration: none;
+  color: #ffeeee;
+}
+
+.navbar {
+  font-weight: 600;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  color: #ffeeee;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  height: 500px;
+  background-image: url("../assets/Galaxia\ azul.png");
+  background-size: cover;
+  border-bottom: 2px solid #45a3e2;
+}
+
+.banner img{
+  opacity: 0.5;
+}
+
+.banner .header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-55%, 0);
+  display: flex;
+  align-items: center;
+  color: #ffeeee;
+}
+
+.propaganda{
+  margin-left: 30px;
+  width: 400px;
+  display: flex;
+  display: inline-block;
+} 
+
+.banner .propaganda h1{
+  margin-top: 70px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffeeee;
+}
+
+.banner .propaganda .p{
+  font-size: 40px;
+  color: #ffeeee;
+}
+
+.banner .propaganda .d{
+  color: #ffeeee;
+}
+
+.banner .propaganda .m{
+  font-size: 50px;
+  color: #ee3737;
+}
+
+.propaganda .box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly
+}
+
+.propaganda .box {
+  margin-top: 60px;
+}
+
+.propaganda b{
+  font-size: 50px;
+  color:#ee3737 ;
+}
+
+/* O que é Signo*/
+.signo{
+  height: 340px;
+}
+
+.signo h1{
+  display: flex;
+  justify-content: center;
+}
+
+.signo .guia{
+  width: 600px;
+  height: 100px; 
+  display: inline-block;
+  margin-left: 50px; 
+}
+
+.signo .container img{
+  margin-left: 150px;
+}
+
+.signo{
+  margin-bottom: 30px;
+}
+
+/* Guia */
+.ascendente .titulo{
+  display: flex;
+  justify-content: center;
+}
+  
+.ascendente .guia{
+  width: 800px;
+  height: 250px; 
+  display: inline-block;
+  margin-left: 150px;
+}
+  
+.bola{
+  display: inline-block;
+}  
+  
+/* Aspectos */
+.aspectos{
+  height: 600px;
+  background-image: url("../assets/galaxia\ valores.jpg") ;
+  background-size: cover;
+  border-top: 2px solid #45a3e2;
+}
+
+.aspectos h4{
+  color: #ffffff;
+  font-weight: 100px;
+}
+
+.aspectos h1{
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+  font-size:xx-large;
+  color: #ee3737;
+}
+
+.aspectos p{
+  font-weight: lighter;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.aspectos .boxes {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly
+
+}
+
+.aspectos .boxes {
+  margin-top: 100px;
+}
+
+.boxes_dois{
+  margin-bottom: 50px;
+}
+
+.boxes{
+  flex-wrap: wrap-reverse;
+}
+
+.box{
+  display: inline-block;
+}
+
+.aspectos .box img {
+  transition:ease 0.5s ;
+}
+
+.aspectos .box img:hover{
+
+  transform: scale(1.1);
+}
+
+/* Elementos */
+.elementos{
+background-image: url("../assets/galaxia\ valores.jpg");
+  background-size: cover;
+  border-top: 3px solid #45a3e2;
+  border-bottom: 3px solid #45a3e2;
+}
+
+.elementos .titulo{
+  display: flex;
+  justify-content: center;
+  color:#3535eec0;
+}
+
+.elementos .boxes{
+  display: flex;
+  justify-content: center; 
+  text-align: center; 
+  justify-content: space-evenly 
+}
+
+.elementos .boxes{
+  flex-wrap: wrap-reverse;
+  }  
+
+.elementos .box{
+  display: inline-block;
+} 
+
+.elementos p {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: larger;
+  font-weight: 750;
+}
+
+.boxe_um{
+ margin-top: 50px;
+}
+
+.div_acertos{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Valores */
+
+.valores{
+  height: 600px;
+}
+
+.valores .titulo{
+  display: flex;
+  justify-content: center;
+  color: #3535eec0;
+}
+
+.valores{
+  background-image: url("../assets/galaxia\ valores.jpg");
+  background-size: cover;
+  /* border-top: 3px solid #45a3e2;
+  border-bottom: 3px solid #45a3e2; */
+}
+
+.valores .titulo{
+  display: flex;
+  justify-content: center;
+  color: #45a3e2;
+}
+
+.valores p{
+  color: #ffeeee;
+}
+
+.valores h4{
+  color: #45a3e2;
+}
+
+.valores .boxes{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly
+}
+
+.valores .boxes{
+  flex-wrap: wrap-reverse;
+  }
+  
+.valores .box{
+  display: inline-block;
+  }
+
+/* Aprendizado */
+
+.aprendizado{
+  margin-left: 300px;
+  width: 700px;
+  display: flex;
+  display: inline-block;
+} 
+
+.banner .aprendizado h1{
+  margin-top: 130px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffeeee;
+}
+
+.banner .aprenda {
+  color: #ffeeee;
+}
+
+.banner .aprendizado .d{
+  color: #ffeeee;
+}
+
+.banner .aprendizado .m{
+  font-size: 50px;
+  color: #ee3737;
+}
+
+.aprendizado .box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly
+}
+
+.aprendizado .box {
+  margin-top: 60px;
+}
+
+/* Login e Cadastro */
+.login{
+  background-image: url("../assets/Galaxia\ azul.png");
+}
+
+.cadastro{
+  background-image: url("../assets/Galaxia\ azul.png");
+}
+
+.login{
+  height: 600px;
+  background-image: url("../assets/ceu\ estrelado\ fundo.png");
+  background-size: cover;
+}
+
+.login .card{
+  justify-content: space-around;
+  background-image: url("../assets/bola\ card.png") ;
+  background-size: cover;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top:  30px;
+  opacity: 2;
+}
+
+.login .container {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login #div_erros_login {
+  margin-top: 15px;
+}
+
+.login h2 {
+  color: #ffeeee;
+}
+
+.login p { 
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  color: #ffeeee;
+  flex-direction: column;
+}
+
+.login .formulario{
+  margin-left: 25px;
+  margin-top: 50px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  font-family: 'Exo 2', sans-serif;
+  border: 0;
+  border-radius: 5px; 
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color:#881ae7 ; 
+  width: 120px;
+  align-self: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Footer */
+
+.footer{
+  height: 90px;
+  background-color: rgb(58, 54, 54);
+}
+
+.footer.boxes {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly
+
+}
