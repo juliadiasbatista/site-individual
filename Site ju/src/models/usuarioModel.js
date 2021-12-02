@@ -5,7 +5,6 @@ function contagemSignos(fkSigno){
 var instrucao = `select count(*) as quantidade from usuario where fk_signo = ${fkSigno}`;
 
 return database.executar(instrucao);
-// A função esta retornando o resultado do select
 
 }
 

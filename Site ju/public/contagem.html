@@ -6,22 +6,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="icon" href="">
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <select id="signo_atual">
 
-        <option value="1">Aries</option>
-        <option value="2">Touro</option>
-        <option value="3">Capricornio</option>
-        <option value="4">Peixes</option>
+    <div class="banner">
+        <div class="container">
+            <div class="header">
+                <div class="container">
 
-    </select>
+                    <h1>
 
-    <div id="div_signo">
+
+                    </h1>
+
+                    <ul class="navbar">
+                        <li>
+                            <a href="./index.html">Início</a>
+                        </li>
+
+                        <li>|</li>
+
+                        <li>
+                            <a href="./login.html">Login</a>
+                        </li>
+
+                        <li>
+                            <a href="./cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="propaganda_login">
+                <div class="box">
+                    <h1>
+                        Veja o significado do seu signo e ascendente
+                    </h1>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <button onclick="pesquisar()">Pesquisar</button>
+    <div class="ascendente_tabela">
+        <div class="boxes">
+
+            <div class="box">
+                <img src="./assets/Captura de tela 2021-12-02 021417.png">
+            </div>
+
+            <div class="box">
+                <h1>Tabela do ascendente</h1>
+                <h2>Basta olhar o horário em que você nasceu para descobrir seu ascendente</h2>
+            </div>
+
+          
+        </div>
+    </div>
+
+    <div class="ranking">
+
+        <div class="titulo">
+            <h1>Ranking de Signos do site </h1>
+        </div>
+
+        <div class="card">
+
+            <select id="signo_atual">
+
+                <option value="1">Aries</option>
+                <option value="2">Touro</option>
+                <option value="3">Gemeos</option>
+                <option value="4">Peixes</option>
+                <option value="5">Câncer</option>
+                <option value="6">Leão</option>
+                <option value="7">Virgem</option>
+                <option value="8">Libra</option>
+                <option value="9"> Escorpião</option>
+                <option value="10">Sagitario</option>
+                <option value="11">Capricornio</option>
+                <option value="12">Aquário</option>
+
+
+            </select>
+
+            <div id="div_signo">
+            </div>
+
+            <div class="pesquisa">
+                <button onclick="pesquisar()">Pesquisar</button>
+            </div>
+        </div>
+
+    </div>
 
 
 </body>
@@ -29,13 +113,28 @@
 </html>
 
 <script>
+
     function pesquisar() {
 
+        //var atribuindo o valor do select 
         var fkSigno = signo_atual.value
+
+        // chamando a api
         fetch(`/usuarios/contagem/${fkSigno}`)
+
             .then(function (resultado) {
+
                 resultado.json().then(function (json) {
-                    div_signo.innerHTML = json[0].quantidade
+                    // Pegando o Json do resultado
+
+                    var quantidade = json[0].quantidade;
+
+                    if (quantidade == 0) {
+                        div_signo.innerHTML = `Nenhum usuário com esse signo.`
+                    }
+                    else {
+                        div_signo.innerHTML = `Usuários com esse signo: ${quantidade}`
+                    }
                 })
             })
 

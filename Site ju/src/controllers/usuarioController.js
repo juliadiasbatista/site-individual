@@ -3,11 +3,12 @@ var usuarioModel = require("../models/usuarioModel");
 
 var sessoes = [];
 
+
 function contagemDeSignos(req, res) {
+
     var fkSigno = req.params.fkSigno
 
     usuarioModel.contagemSignos(fkSigno)
-
         .then(function (resultado) {
             res.status(200).json(resultado)
 
