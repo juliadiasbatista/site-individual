@@ -16,26 +16,17 @@
 
 
     <div class="banner">
-
         <div class="container">
-
             <div class="header">
-
                 <div class="container">
-
-                    <h1>
-
-
-                    </h1>
-
                     <ul class="navbar">
+
+                        <h2 style="color: #db4444; font-weight: lighter;">
+                            ASTRO LEARN
+                        </h2>
 
                         <li>
                             <a href="./index.html">Início</a>
-                        </li>
-
-                        <li>
-                            <a href="./O que é mapa.html">Aprenda sobre</a>
                         </li>
 
                         <li>|</li>
@@ -49,11 +40,8 @@
                         </li>
 
                     </ul>
-
                 </div>
-
             </div>
-
         </div>
 
         <div class="login">
@@ -61,12 +49,13 @@
                 <div class="card ">
                     <div class="formulario">
                         <form id="form_login" method="post" onsubmit="return cadastrar()">
+
                             <h2>Bem Vindo!</h2>
 
-                            <p> 
+                            <p>
                                 Nome:
                                 <input id="nome_input" name="nome" type="text" placeholder="Nome Completo">
-                                
+
                                 E-mail:
                                 <input id="email_input" name="email" type="text" placeholder="Login">
 
@@ -74,27 +63,58 @@
                                 <input id="senha_input" name="senha" type="password" placeholder="******">
 
                                 Confirmação da Senha:
-                                <input id="confirmacao_senha_input" name="confirmacao-senha" type="password" placeholder="******">
+                                <input id="confirmacao_senha_input" name="confirmacao-senha" type="password"
+                                    placeholder="******">
                                 <br>
+
+                                signo:
+                                <select id="signo_atual">
+
+                                    <option value="1">Aries</option>
+                                    <option value="2">Touro</option>
+                                    <option value="3">Capricornio</option>
+                                    <option value="4">Peixes</option>
+
+                                </select>
+                                <br>
+
+                                <button class="btn" type="button" onclick="cadastrar()">
+                                    Cadastrar
+                                </button>
                             </p>
 
-                            signo:
-                            <select id="signo_atual">
 
-                                <option value="1">Aries</option>
-                                <option value="2">Touro</option>
-                                <option value="3">Capricornio</option>
-                                <option value="4">Peixes</option>
-                        
-                            </select>
-
-                            <button class="btn" type="button" onclick="cadastrar()">
-                                Cadastrar
-                            </button>
 
                         </form>
-                        
+
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_login">
+        <div class="container">
+
+            <div class="boxes">
+                <div class="box">
+                    <h4>Astro Learn</h4>
+                    <p>Astrolern ® all rights reserved</p>
+                </div>
+
+                <div class="box">
+                    <h6>Facebook</h6>
+                    <img style="width: 35px;" src="./assets/facebook.png">
+                </div>
+
+                <div class="box">
+                    <h6>Instagram</h6>
+                    <img style="width: 35px;" src="./assets/instagram.png">
+                </div>
+
+                <div class="box">
+                    <h6>Twitter</h6>
+                    <img style="width: 35px;" src="./assets/twitter.png">
                 </div>
             </div>
         </div>
@@ -129,19 +149,19 @@
             if (confirmacaoSenhaVar == "") {
                 console.log('confirmacaoSenha está em branco')
             }
-            
+
             return false;
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            
+
             return false;
         }
 
         if (senhaVar != confirmacaoSenhaVar) {
             window.alert("As senhas inseridas devem ser iguais para prosseguir!");
-            
+
             return false;
         }
 
@@ -164,14 +184,14 @@
                 window.alert("Cadastro realizado com sucesso!");
                 window.location = "./login.html";
                 limparFormulario();
-               
+
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
                 alert('erro')
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            
+
         });
 
         return false;

@@ -50,17 +50,19 @@ body {
 }
 
 .propaganda{
-  margin-left: 30px;
+  margin-left: 500px;
   width: 400px;
   display: flex;
   display: inline-block;
+  
 } 
 
 .banner .propaganda h1{
   margin-top: 70px;
   font-size: 30px;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: #ffeeee;
+  font-weight: lighter;
 }
 
 .banner .propaganda .p{
@@ -114,11 +116,7 @@ body {
   margin-left: 150px;
 }
 
-.signo{
-  margin-bottom: 30px;
-}
-
-/* Guia */
+/* O que é ascendente */
 .ascendente .titulo{
   display: flex;
   justify-content: center;
@@ -138,13 +136,12 @@ body {
 /* Aspectos */
 .aspectos{
   height: 600px;
-  background-image: url("../assets/galaxia\ valores.jpg") ;
+  background-color: #e5f2fa;
   background-size: cover;
-  border-top: 2px solid #45a3e2;
 }
 
 .aspectos h4{
-  color: #ffffff;
+  color: #000000;
   font-weight: 100px;
 }
 
@@ -184,6 +181,12 @@ body {
 
 .box{
   display: inline-block;
+}
+
+.aspectos .box p{
+  font-size: 18px;
+  font-weight: lighter;
+  color: #000000;
 }
 
 .aspectos .box img {
@@ -349,15 +352,15 @@ background-image: url("../assets/galaxia\ valores.jpg");
   justify-content: space-around;
   background-image: url("../assets/bola\ card.png") ;
   background-size: cover;
-  height: 500px;
+  height: 300px;
   width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top:  30px;
   opacity: 2;
+  margin-bottom: 50px;
 }
 
 .login .container {
@@ -372,13 +375,15 @@ background-image: url("../assets/galaxia\ valores.jpg");
 }
 
 .login h2 {
-  color: #ffeeee;
+  margin-left: 20px;
+  color: #f12c2c;
+  font-weight: lighter;
 }
 
 .login p { 
   display: flex;
   align-items: center;
-  font-weight: bolder;
+  font-weight: lighter;
   color: #ffeeee;
   flex-direction: column;
 }
@@ -401,7 +406,7 @@ button {
   padding: 10px 15px;
   color: white;
   background-color:#881ae7 ; 
-  width: 120px;
+  width: 110px;
   align-self: center;
 }
 
@@ -429,10 +434,28 @@ form {
   text-align: center;
 }
 
+.propaganda_login .v{
+  font-weight: lighter;
+}
+
+/* Ascendente e signos */
+.signo_ascendente{
+  margin-left: 50px;
+}
+
+.signo_ascendente h1{
+  color: #2020d3;
+}
+
+.signo_ascendente .titulo{
+  display: flex;
+  justify-content: center;
+}
+
 /* Ascendente */
 
 .ascendente_tabela{
-  background-image: url("../assets/MAPA-ASTRAL.jpg");
+  height: 650px;
   background-size: cover;
 }
 
@@ -442,7 +465,7 @@ form {
 }
 
 .ascendente_tabela h1{
-  color: #5937ee;
+  color: #4c30b4;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -451,25 +474,25 @@ form {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Ranking */
+
 /* Card */
   .ranking .card{
-   /* height: 300px;*/
-   width: 300px; 
+   background-color: #4c30b4;
+   border-radius: 50px;
+   height: 300px;
+   width: 600px; 
    display: flex;
    justify-content: center;
    flex-direction: column;
-   margin-left: 500px;
-   margin-top: 50px;
- } 
-
- /* fim */
+   margin-left: 350px;
+   padding: 10px 15px;
+} 
 
  .ranking{
-   background-image: url("../assets/Galaxia\ azul.png");
+  
    background-size: cover;
-  justify-content: center;
-  height: 300px;
-
+   height: 400px;
  }
 
  .ranking .titulo{
@@ -478,37 +501,125 @@ form {
  }
 
  .ranking h1{
-   color: #2020d3;
+   color: #e5e5f1;
+   font-weight: lighter;
  }
 
  .ranking button{
   font-family: 'Exo 2', sans-serif;
+  font-weight: lighter;
   border: 0;
   border-radius: 5px; 
-  font-weight: 600;
-  font-size: 18px;
   padding: 10px 15px;
   color: white;
   background-color:#881ae7 ; 
   width: 120px;
   align-self: center;
+  margin-top: 15px;
  }
 
  .ranking .pesquisa{
    display: flex;
    justify-content: center;
-   margin-top: 50px;
  }
+
+ .div_select{
+   margin-left: 250px;
+ }
+
+ .div_signo{
+   display: flex;
+   justify-content: center;
+   margin-left: 50px;
+ }
+
 /* Footer */
+
 .footer{
-  height: 90px;
+  height: 130px;
   background-color: rgb(58, 54, 54);
 }
 
 .footer.boxes {
   display: flex;
   justify-content: center;
-  text-align: center;
-  justify-content: space-evenly
+}
 
+.footer .box h6{
+  font-weight: lighter;
+  color: #ffeeee;
+}
+
+.footer .box p{
+  font-weight: lighter;
+  font-size: smaller;
+
+}
+
+/* Footer contagem */
+
+.footer_contagem{
+  height: 130px;
+  background-color: rgb(58, 54, 54);
+}
+
+.footer_contagem .boxes {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.footer_contagem .box h6{
+  font-weight: lighter;
+  color: #ffeeee;
+}
+
+.footer_contagem .box h4{
+  font-weight: lighter;
+  color: #ffeeee;
+  
+}
+
+.footer_contagem .box p{
+  font-weight: lighter;
+  color: #ffeeee;
+}
+
+.footer_contagem .box p{
+  font-weight: lighter;
+  font-size: smaller;
+}
+
+/* Footer Login */
+
+.footer_login {
+  height: 160px;
+  background-color: rgb(58, 54, 54);
+}
+
+.footer_login .boxes {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.footer_login .box h6{
+  font-weight: lighter;
+  color: #ffeeee;
+}
+
+.footer_login .box h4{
+  font-weight: lighter;
+  color: #ffeeee;
+  
+}
+
+.footer_login .box p{
+  font-weight: lighter;
+  color: #ffeeee;
+}
+
+.footer_login .box p{
+  font-weight: lighter;
+  font-size: smaller;
 }
